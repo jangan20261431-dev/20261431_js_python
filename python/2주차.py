@@ -1,0 +1,6 @@
+print("1.Hello world")
+print(10+10)
+print(30-10)
+print(30*30)
+print("30""*""30""=",30 * 30)
+print("123""*""456",123 * 456)
