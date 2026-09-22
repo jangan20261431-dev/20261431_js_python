@@ -1,0 +1,54 @@
+<div id="container">
+  <ul>
+    <li>
+      <label for="price1">구매금액 1</label>
+      <input type="text" id="price1" value="">원
+    </li>
+    <li>
+      <label for="price2">구매금액 2</label>
+      <input type="text" id="price2" value="">원
+    </li>
+    <li>
+      <label for="price3">구매금액 3</label>
+      <input type="text" id="price3" value="">원
+    </li>
+    <li>
+      <button onclick="showAlert()">등급 확인하기</button>
+    </li>
+    <li>
+      <div id="showResult"></div>
+    </li>
+  </ul>
+</div>
+
+<script>
+function showAlert() {
+  
+  var p1 = document.getElementById("price1").value;
+  var p2 = document.querySelector("#price2").value;
+  var p3 = document.querySelector("#price3").value;
+
+  
+  var totalAmount = parseInt(p1) + parseInt(p2) + parseInt(p3);
+  
+  var grade = "";
+  var rate = 0;
+
+  if (totalAmount >= 50000) {
+    grade = "vIp";
+    rate = 3;
+  } else if (totalAmount >= 30000) {
+    grade = "Gold";
+    rate = 2;
+  } else {
+    grade = "Silver";
+    rate = 1;
+  }
+
+  var rewardAmount = totalAmount * (rate / 100);
+
+  
+  document.querySelector("#showResult").innerHTML = 
+    "당신의 구매금액은 " + totalAmount + "원으로 " + grade + " 고객으로 적립율은 " + rate + "%이며. 적립금은 " + rewardAmount + "원 입니다.";
+}
+</script>
