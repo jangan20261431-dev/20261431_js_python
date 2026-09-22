@@ -1,0 +1,11 @@
+body {
+    taxt-align: center;
+}
+#heading {
+    color: red;
+
+}
+#text {
+    color: blue;
+    font-size: 15px;
+}
