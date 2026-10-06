@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>지도</title>
+</head>
+<body>
+
+<h1>지도 열기</h1>
+<button>지도 열기</button>
+
+
+<button="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x357b6a73d8e8951b%3A0x97a3c3208c2fd18e!2z7J6l7JWI64yA7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1791270506282!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</head>
+<body>
+
+   
+
+<p id="test"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+
+
+let text = "";
+for (let i = 0; i <= 100; i += 2) {
+  text += "The number is " + i + "<br>";
+}
+
+document.getElementById("test").innerHTML = text;
+</script>
+
+</body>
+</html>
+
+
+
+
+
